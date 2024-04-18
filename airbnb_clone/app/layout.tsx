@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/navbar";
 import SearchFilters from "./components/navbar/searchfilters";
-
+import Modal from "./components/modals/modal";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,7 +22,9 @@ export default function RootLayout({
         <Navbar></Navbar>
         <div className="pt-32">
         {children}
-        </div></body>
+        </div>
+        <Modal/>
+        </body>
     </html>
   );
 }
